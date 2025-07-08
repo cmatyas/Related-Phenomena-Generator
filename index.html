@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Related Phenomena Generator</title>
+    <title>AI Science Phenomena Generator</title>
     <link rel="stylesheet" href="src/style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 </head>
 <body>
     <header>
-        <h1>Welcome to the Related Phenomena Generator!</h1>
+        <h1>AI Science Phenomena Generator</h1>
     </header>
 
     <main>
+        <div class="form-container">
         <form class="container" id="phenom-generator-form">
             <input 
                 type="text" 
                 class="instructions"
-                placeholder="Enter the topic of the unit or a Next Generation Science Standard."
+                placeholder="Enter a Next Generation Science Standard or state science standard."
                 autofocus
                 required
                 autocomplete="off"
@@ -25,18 +26,22 @@
             >
             <input type="submit" class="submit-button">
         </form>
-        <div class="row">
-            <div class="column left">
-                <p id="related-phenomenon-one"></p>
-            </div>
-            <div class="column middle">
-                <p id="related-phenomenon-two"></p>
-            </div>
-            <div class="column right">
-                <p id="related-phenomenon-three"></p>
+        <div class="hint">i.e. MS-PS2-4 or PA 3.2.1.D </div>
+        </div>
+        <div class="results hidden" id="results"> 
+            <div class="notice blink" id="notice">Generating a list of phenomena...</div>
+            <div class="row hidden" id="generation">
+                <div class="column left">
+                    <p id="related-phenomenon-one"></p>
+                </div>
+                <div class="column middle">
+                    <p id="related-phenomenon-two"></p>
+                </div>
+                <div class="column right">
+                    <p id="related-phenomenon-three"></p>
+                </div>
             </div>
         </div>
-        <br>
     </main>
     <footer>
         This project was coded by 
