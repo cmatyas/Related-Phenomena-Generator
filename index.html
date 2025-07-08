@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Related Phenomena Generator</title>
     <link rel="stylesheet" href="src/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 </head>
 <body>
     <header>
@@ -20,11 +21,22 @@
                 autofocus
                 required
                 autocomplete="off"
+                id="user-instructions"
             >
             <input type="submit" class="submit-button">
         </form>
-        <div class="related-phenomena" id="related-phenom">
+        <div class="row">
+            <div class="column left">
+                <p id="related-phenomenon-one"></p>
+            </div>
+            <div class="column middle">
+                <p id="related-phenomenon-two"></p>
+            </div>
+            <div class="column right">
+                <p id="related-phenomenon-three"></p>
+            </div>
         </div>
+        <br>
     </main>
     <footer>
         This project was coded by 
